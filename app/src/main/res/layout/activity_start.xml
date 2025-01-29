@@ -77,8 +77,7 @@
                     <ImageView
                         android:id="@+id/leftarrow"
                         style="@style/MyImageView"
-                        android:onClick="leftClick"
-                        android:layout_marginEnd="100dp"
+                        android:layout_marginEnd="90dp"
                         app:srcCompat="@drawable/left_arrow"/>
                     <TextView
                         style="@style/MyTextView"
@@ -89,8 +88,7 @@
                     <ImageView
                         android:id="@+id/rightarrow"
                         style="@style/MyImageView"
-                        android:onClick="rightClick"
-                        android:layout_marginStart="100dp"
+                        android:layout_marginStart="90dp"
                         app:srcCompat="@drawable/right_arrow" />
                 </LinearLayout>
                 <Button

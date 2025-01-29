@@ -53,23 +53,48 @@ public class StartActivity extends AppCompatActivity {
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 true); // true = окно закрывается при клике вне него
 
-        // Обработчики кликов для пунктов меню
         TextView item1 = popupView.findViewById(R.id.menu_item1);
         TextView item2 = popupView.findViewById(R.id.menu_item2);
         TextView item3 = popupView.findViewById(R.id.menu_item3);
+        TextView item4 = popupView.findViewById(R.id.menu_item4);
+        TextView item5 = popupView.findViewById(R.id.menu_item5);
+        TextView item6 = popupView.findViewById(R.id.menu_item6);
+        TextView item7 = popupView.findViewById(R.id.menu_item7);
+        TextView item8 = popupView.findViewById(R.id.menu_item8);
+
 
         item1.setOnClickListener(v -> {
-            Toast.makeText(this, "Выбрана опция 1", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Вы перешли на страницу школы", Toast.LENGTH_SHORT).show();
             popupWindow.dismiss();
         });
 
         item2.setOnClickListener(v -> {
-            Toast.makeText(this, "Выбрана опция 2", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Вы перешли на страницу электронного дневника", Toast.LENGTH_SHORT).show();
             popupWindow.dismiss();
         });
 
         item3.setOnClickListener(v -> {
-            Toast.makeText(this, "Выбрана опция 3", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Вы перешли на страницу домашнего задания", Toast.LENGTH_SHORT).show();
+            popupWindow.dismiss();
+        });
+        item4.setOnClickListener(v -> {
+            Toast.makeText(this, "Вы перешли на страницу уведомлений об учебе", Toast.LENGTH_SHORT).show();
+            popupWindow.dismiss();
+        });
+        item5.setOnClickListener(v -> {
+            Toast.makeText(this, "Вы перешли на страницу мероприятий", Toast.LENGTH_SHORT).show();
+            popupWindow.dismiss();
+        });
+        item6.setOnClickListener(v -> {
+            Toast.makeText(this, "Вы перешли на страницу актива школы", Toast.LENGTH_SHORT).show();
+            popupWindow.dismiss();
+        });
+        item7.setOnClickListener(v -> {
+            Toast.makeText(this, "Вы перешли на страницу питания", Toast.LENGTH_SHORT).show();
+            popupWindow.dismiss();
+        });
+        item8.setOnClickListener(v -> {
+            Toast.makeText(this, "Вы перешли на страницу учителей", Toast.LENGTH_SHORT).show();
             popupWindow.dismiss();
         });
 
