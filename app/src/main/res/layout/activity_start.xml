@@ -12,7 +12,8 @@
         android:orientation="vertical"
         android:gravity="top">
     <com.google.android.material.navigation.NavigationView
-        style="@style/MyUpBar">
+        style="@style/MyUpBar"
+        android:paddingTop="?android:attr/actionBarSize">
     <LinearLayout
         android:orientation="horizontal"
         style="@style/MyLinerLayout">
@@ -22,7 +23,8 @@
             app:srcCompat="@drawable/logotype"
             android:layout_marginStart="10dp" />
         <Button
-            android:text="О ПРОГРАММЕ"
+            android:onClick="about_app"
+            android:text="О ПРИЛОЖЕНИИ"
             android:backgroundTint="@color/button_color_up"
             android:textSize="13sp"
             style="@style/MyButtonStyleMargin"/>
@@ -117,7 +119,8 @@
                     <TextView
                         style="@style/MyTextView"
                         android:text="О НАС"
-                        android:textSize="23dp"/>
+                        android:textSize="23dp"
+                        android:fontFamily="@font/jost_semibold"/>
                    <TextView
                        style="@style/MyTextView"
                        android:text="О приложении"/>
@@ -148,7 +151,8 @@
                <TextView
                    style="@style/MyTextView"
                    android:text="ВОЗМОЖНОСТИ"
-                   android:textSize="23dp"/>
+                   android:textSize="23dp"
+                   android:fontFamily="@font/jost_semibold"/>
                <TextView
                    style="@style/MyTextView"
                    android:text="Родителям"/>

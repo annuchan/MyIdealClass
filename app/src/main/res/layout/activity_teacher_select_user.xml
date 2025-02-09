@@ -41,144 +41,135 @@
                 app:srcCompat="@drawable/exitbutton"/>
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <LinearLayout
-            android:orientation="vertical"
-            style="@style/MyLinerLayout">
-        <LinearLayout
-            android:orientation="horizontal"
-            style="@style/MyLinerLayout">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            style="@style/MyLinerLayout">
-            <ImageView
-                android:id="@+id/dropdown_menu"
-                style="@style/MyImageView"
-                app:srcCompat="@drawable/menu"
-                android:layout_margin="10dp"/>
-            <ImageView
-                android:id="@+id/back"
-                style="@style/MyImageView"
-                app:srcCompat="@drawable/left_arrow"/>
-        </LinearLayout>
-            <TextView
-                style="@style/MyTextView"
-                android:layout_width="match_parent"
-                android:text="Страница учителя"
-                android:textSize="25sp"
-                android:fontFamily="@font/jost_semibold"/>
-        </LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                style="@style/MyLinerLayout">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    style="@style/MyLinerLayout">
+                    <ImageView
+                        android:id="@+id/dropdown_menu"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/menu"
+                        android:layout_margin="10dp"/>
+                    <ImageView
+                        android:id="@+id/back"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/left_arrow"/>
+                </LinearLayout>
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="Страница учителя"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/jost_semibold"/>
+            </LinearLayout>
+
             <ImageView
                 android:layout_marginTop="10dp"
+                android:layout_height="250dp"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/schoolteacherphoto"/>
-            <Button
-                android:text="Администрация"
-                style="@style/MyButtonStyle"/>
-            <Button
-                android:text="Учителя начальной школы"
-                style="@style/MyButtonStyle"/>
-            <Button
-                android:text="Учителя русской и иностранной филологии"
-                style="@style/MyButtonStyle"/>
-            <Button
-                android:text="Учителя физико-математического профиля"
-                style="@style/MyButtonStyle"
-                android:textSize="18sp"/>
-            <Button
-                android:text="Учителя социального профиля"
-                style="@style/MyButtonStyle"/>
-            <Button
-                android:text="Учителя естественно-научного профиля"
-                style="@style/MyButtonStyle"/>
-            <Button
-                android:text="Учителя физического воспитания и ОБЖ"
-                style="@style/MyButtonStyle"/>
-            <Button
-                android:text="Учителя культорологического профиля"
-                style="@style/MyButtonStyle"/>
+                app:srcCompat="@drawable/teacher"/>
 
-        <FrameLayout
-            style="@style/MyLinerLayout"
-            android:background="#E3D5CA">
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTeachers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <FrameLayout
                 style="@style/MyLinerLayout"
-                android:orientation="horizontal"
-                android:gravity="top|center">
+                android:background="#E3D5CA">
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/MyLinerLayout"
+                android:background="#E3D5CA">
                 <LinearLayout
                     style="@style/MyLinerLayout"
-                    android:layout_width="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:gravity="top|center">
-                    <TextView
-                        style="@style/MyTextView"
-                        android:text="О НАС"
-                        android:textSize="23dp"/>
-                    <TextView
-                        style="@style/MyTextView"
-                        android:text="О приложении"/>
-                    <TextView
-                        style="@style/MyTextView"
-                        android:text="Контакты"/>
-                    <TextView
-                        style="@style/MyTextView"
-                        android:text="Новости"/>
                     <LinearLayout
                         style="@style/MyLinerLayout"
-                        android:orientation="horizontal">
-                        <ImageView
-                            style="@style/MyImageView"
-                            app:srcCompat="@drawable/vk"
-                            android:contentDescription="Перейти в вк"/>
-                        <ImageView
-                            style="@style/MyImageView"
-                            app:srcCompat="@drawable/telegram"
-                            android:contentDescription="Перейти в телеграмм"/>
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="top|center">
+                        <TextView
+                            style="@style/MyTextView"
+                            android:text="О НАС"
+                            android:textSize="23dp"/>
+                        <TextView
+                            style="@style/MyTextView"
+                            android:text="О приложении"/>
+                        <TextView
+                            style="@style/MyTextView"
+                            android:text="Контакты"/>
+                        <TextView
+                            style="@style/MyTextView"
+                            android:text="Новости"/>
+                        <LinearLayout
+                            style="@style/MyLinerLayout"
+                            android:orientation="horizontal">
+                            <ImageView
+                                style="@style/MyImageView"
+                                app:srcCompat="@drawable/vk"
+                                android:contentDescription="Перейти в вк"/>
+                            <ImageView
+                                style="@style/MyImageView"
+                                app:srcCompat="@drawable/telegram"
+                                android:contentDescription="Перейти в телеграмм"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        style="@style/MyLinerLayout"
+                        android:orientation="vertical"
+                        android:gravity="top|center">
+                        <TextView
+                            style="@style/MyTextView"
+                            android:text="ВОЗМОЖНОСТИ"
+                            android:textSize="23dp"/>
+                        <TextView
+                            style="@style/MyTextView"
+                            android:text="Родителям"/>
+                        <TextView
+                            style="@style/MyTextView"
+                            android:text="Учителям"/>
                     </LinearLayout>
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    style="@style/MyLinerLayout"
-                    android:orientation="vertical"
-                    android:gravity="top|center">
-                    <TextView
-                        style="@style/MyTextView"
-                        android:text="ВОЗМОЖНОСТИ"
-                        android:textSize="23dp"/>
-                    <TextView
-                        style="@style/MyTextView"
-                        android:text="Родителям"/>
-                    <TextView
-                        style="@style/MyTextView"
-                        android:text="Учителям"/>
-                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                style="@style/MyLinerLayout"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="#D6CCC2">
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="0dp"
+                    android:text="Пользовательское соглашение"
+                    android:textSize="10sp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    style="@style/MyTextView"
+                    android:text="© 2024 - 2025 «Мой идеальный класс»"
+                    android:gravity="end"
+                    android:textSize="10sp"
+                    android:layout_marginRight="10dp"/>
             </LinearLayout>
-        </FrameLayout>
-        <LinearLayout
-            style="@style/MyLinerLayout"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="#D6CCC2">
-            <TextView
-                style="@style/MyTextView"
-                android:layout_width="0dp"
-                android:text="Пользовательское соглашение"
-                android:textSize="10sp"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"/>
-            <TextView
-                style="@style/MyTextView"
-                android:text="© 2024 - 2025 «Мой идеальный класс»"
-                android:gravity="end"
-                android:textSize="10sp"
-                android:layout_marginRight="10dp"/>
         </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
     </LinearLayout>
 </RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About_the_app"
+    android:background="#EDEDE9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top">
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3D5CA"
+        android:minHeight="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        <LinearLayout
+            android:orientation="horizontal"
+            style="@style/MyLinerLayout">
+            <ImageView
+                android:id="@+id/startactivity"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/logotype"
+                android:layout_marginStart="10dp" />
+            <Button
+                android:text="О ПРИЛОЖЕНИИ"
+                android:backgroundTint="@color/button_color_up"
+                android:textSize="13sp"
+                style="@style/MyButtonStyleMargin"/>
+            <View
+                style="@style/MyLineVertical"/>
+            <Button
+                android:text="ПОДДЕРЖКА"
+                android:backgroundTint="@color/button_color_up"
+                android:textSize="13sp"
+                style="@style/MyButtonStyleMargin"/>
+            <View
+                style="@style/MyLineVertical"/>
+            <ImageView
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/exitbutton"/>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        style="@style/MyLinerLayout">
+        <LinearLayout
+            android:orientation="horizontal"
+            style="@style/MyLinerLayout">
+            <ImageView
+                android:id="@+id/dropdown_menu"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/menu"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                style="@style/MyTextView"
+                android:layout_width="match_parent"
+                android:text="О приложении"
+                android:textSize="25dp"
+                android:fontFamily="@font/jost_semibold"/>
+        </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        style="@style/MyLinerLayout">
+        <TextView
+            android:id="@+id/CustomText"
+            style="@style/MyTextView"
+            android:layout_marginTop="10dp"
+            android:text="Наша миссия – упростить и улучшить взаимодействие между родителями и сотрудниками школы, обеспечив эффективную коммуникацию и поддержку образовательного процесса." />
+        <TextView
+            style="@style/MyTextView"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Ключевые направления нашей деятельности:"
+            android:fontFamily="@font/jost_semibold"/>
+        <TextView
+            style="@style/MyTextView"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="➤ Содействие цифровой трансформации образовательных процессов." />
+        <TextView
+            style="@style/MyTextView"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="➤ Устранение информационного неравенства, обеспечение доступности учебных данных" />
+        <TextView
+            style="@style/MyTextView"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="➤ Развитие эффективной коммуникации между педагогами и родителями" />
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/about_app_1"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"/>
+        <TextView
+            android:id="@+id/CustomText2"
+            style="@style/MyTextView"
+            android:layout_marginTop="10dp"
+            android:text="Мой идеальный класс – мобильное приложение для эффективной связи сотрудников школы и родителей, интегрированное с платформой для управления учебным процессом и заявками на секции и кружки." />
+        <TextView
+            style="@style/MyTextView"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:text="Мой идеальный класс – это"
+            android:fontFamily="@font/jost_semibold"/>
+        <TextView
+                style="@style/MyTextView"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="➤ Круглосуточный доступ к домашним заданиям, расписаниям и оценкам учеников" />
+        <TextView
+            style="@style/MyTextView"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="➤ Удобные инструменты для подачи заявок на участие в кружках и секциях" />
+        <TextView
+            style="@style/MyTextView"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="➤ Автоматизация учебного процесса и управления классами" />
+        <TextView
+            style="@style/MyTextView"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="➤ Уведомления о событиях, мероприятиях и учебных данных." />
+                </LinearLayout>
+        <FrameLayout
+            style="@style/MyLinerLayout"
+            android:background="#E3D5CA">
+            <LinearLayout
+                style="@style/MyLinerLayout"
+                android:orientation="horizontal"
+                android:gravity="top|center">
+                <LinearLayout
+                    style="@style/MyLinerLayout"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="top|center">
+                    <TextView
+                        style="@style/MyTextView"
+                        android:text="О НАС"
+                        android:textSize="23dp"
+                        android:fontFamily="@font/jost_semibold"/>
+                    <TextView
+                        style="@style/MyTextView"
+                        android:text="О приложении"/>
+                    <TextView
+                        style="@style/MyTextView"
+                        android:text="Контакты"/>
+                    <TextView
+                        style="@style/MyTextView"
+                        android:text="Новости"/>
+                    <LinearLayout
+                        style="@style/MyLinerLayout"
+                        android:orientation="horizontal">
+                        <ImageView
+                            style="@style/MyImageView"
+                            app:srcCompat="@drawable/vk"
+                            android:contentDescription="Перейти в вк"/>
+                        <ImageView
+                            style="@style/MyImageView"
+                            app:srcCompat="@drawable/telegram"
+                            android:contentDescription="Перейти в телеграмм"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    style="@style/MyLinerLayout"
+                    android:orientation="vertical"
+                    android:gravity="top|center">
+                    <TextView
+                        style="@style/MyTextView"
+                        android:text="ВОЗМОЖНОСТИ"
+                        android:textSize="23dp"
+                        android:fontFamily="@font/jost_semibold"/>
+                    <TextView
+                        style="@style/MyTextView"
+                        android:text="Родителям"/>
+                    <TextView
+                        style="@style/MyTextView"
+                        android:text="Учителям"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout
+            style="@style/MyLinerLayout"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#D6CCC2">
+            <TextView
+                style="@style/MyTextView"
+                android:layout_width="0dp"
+                android:text="Пользовательское соглашение"
+                android:textSize="10sp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                style="@style/MyTextView"
+                android:text="© 2024 - 2025 «Мой идеальный класс»"
+                android:gravity="end"
+                android:textSize="10sp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
