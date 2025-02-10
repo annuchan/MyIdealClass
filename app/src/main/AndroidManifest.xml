@@ -20,6 +20,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".School_asset_my_user"
+            android:exported="false" />
+        <activity
+            android:name=".Application_form_User"
+            android:exported="false" />
+        <activity
+            android:name=".School_asset_user"
+            android:exported="false" />
+        <activity
+            android:name=".Important_information_user"
+            android:exported="false" />
+        <activity
+            android:name=".Event_User"
+            android:exported="false" />
+        <activity
             android:name=".Events_user"
             android:exported="false" />
 
