@@ -25,5 +25,7 @@ public interface ApiService {
     Call<List<Important_information>> getImportant_Information();
     @GET("/api/School_asset") // Путь к вашему API для получения списка учителей
     Call<List<School_asset>> getSchool_asset();
+    @GET("/api/Homework") // Путь к вашему API для получения списка учителей
+    Call<List<HomeworkItem>> getHomeworkItem();
 
 }

@@ -20,6 +20,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Homework_user"
+            android:exported="false" />
+        <activity
             android:name=".School_asset_my_user"
             android:exported="false" />
         <activity

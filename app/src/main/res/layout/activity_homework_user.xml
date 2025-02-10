@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Homework_user"
+    android:background="#EDEDE9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top">
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E3D5CA"
+            android:minHeight="40dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+            <LinearLayout
+                android:orientation="horizontal"
+                style="@style/MyLinerLayout">
+                <ImageView
+                    android:id="@+id/startactivity"
+                    style="@style/MyImageView"
+                    app:srcCompat="@drawable/logotype"
+                    android:layout_marginStart="10dp" />
+                <Button
+                    android:text="О ПРИЛОЖЕНИИ"
+                    android:backgroundTint="@color/button_color_up"
+                    android:textSize="13sp"
+                    style="@style/MyButtonStyleMargin"/>
+                <View
+                    style="@style/MyLineVertical"/>
+                <Button
+                    android:text="ПОДДЕРЖКА"
+                    android:backgroundTint="@color/button_color_up"
+                    android:textSize="13sp"
+                    style="@style/MyButtonStyleMargin"/>
+                <View
+                    style="@style/MyLineVertical"/>
+                <ImageView
+                    style="@style/MyImageView"
+                    app:srcCompat="@drawable/exitbutton"/>
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                style="@style/MyLinerLayout">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    style="@style/MyLinerLayout">
+                    <ImageView
+                        android:id="@+id/dropdown_menu"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/menu"
+                        android:layout_margin="10dp"/>
+                    <ImageView
+                        android:id="@+id/back"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/left_arrow"/>
+                    <TextView
+                        style="@style/MyTextView"
+                        android:layout_width="match_parent"
+                        android:text="Домашнее задание"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/jost_semibold"/>
+                </LinearLayout>
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="Здесь представлено всё домашнее задание вашего ребенка"/>
+                <include layout="@layout/schedule_table" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

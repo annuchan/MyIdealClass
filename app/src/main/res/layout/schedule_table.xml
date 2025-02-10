@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="#E3D5CA">
+
+    <!-- Заголовок таблицы -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="День недели"
+                android:gravity="center"
+                android:padding="8dp"
+                style="@style/MyTextView"
+                android:fontFamily="@font/jost_semibold"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Число"
+                android:gravity="center"
+                android:padding="8dp"
+                style="@style/MyTextView"
+                android:fontFamily="@font/jost_semibold"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_weight="2"
+                android:text="Предмет"
+                style="@style/MyTextView"
+                android:fontFamily="@font/jost_semibold"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_weight="2"
+                android:text="Домашнее задание"
+                style="@style/MyTextView"
+                android:fontFamily="@font/jost_semibold"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Оценка"
+                style="@style/MyTextView"
+                android:fontFamily="@font/jost_semibold"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:padding="8dp"/>
+        </TableRow>
+    </TableLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        style="@style/MyTextView"
+        android:textSize="15sp"/>
+</LinearLayout>
