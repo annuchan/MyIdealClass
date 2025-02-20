@@ -24,11 +24,16 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        HomeworkItem item = scheduleList.get(position);
-        holder.subject.setText(item.getSubject());
-        holder.homework.setText(item.getHomework());
-        holder.grade.setText(item.getGrade());
+
     }
+
+//    @Override
+//    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+//        HomeworkItem item = scheduleList.get(position);
+//        holder.subject.setText(item.getSubject());
+//        holder.homework.setText(item.getHomework());
+//        holder.grade.setText(item.getGrade());
+//    }
 
     @Override
     public int getItemCount() {

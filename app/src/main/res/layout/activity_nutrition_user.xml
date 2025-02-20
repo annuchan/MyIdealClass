@@ -5,83 +5,81 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Event_User"
+    tools:context=".Nutrition_user"
     android:background="#EDEDE9">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="top">
-        <com.google.android.material.navigation.NavigationView
+    <com.google.android.material.navigation.NavigationView
+        style="@style/MyUpBar">
+        <LinearLayout
+            android:orientation="horizontal"
+            style="@style/MyLinerLayout">
+            <ImageView
+                android:id="@+id/startactivity"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/logotype"
+                android:layout_marginStart="10dp" />
+            <Button
+                android:text="О ПРИЛОЖЕНИИ"
+                android:backgroundTint="@color/button_color_up"
+                android:textSize="13sp"
+                style="@style/MyButtonStyleMargin"/>
+            <View
+                style="@style/MyLineVertical"/>
+            <Button
+                android:text="ПОДДЕРЖКА"
+                android:backgroundTint="@color/button_color_up"
+                android:textSize="13sp"
+                style="@style/MyButtonStyleMargin"/>
+            <View
+                style="@style/MyLineVertical"/>
+            <ImageView
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/exitbutton"/>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#E3D5CA"
-            android:minHeight="40dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            style="@style/MyLinerLayout">
             <LinearLayout
                 android:orientation="horizontal"
                 style="@style/MyLinerLayout">
                 <ImageView
-                    android:id="@+id/startactivity"
+                    android:id="@+id/dropdown_menu"
                     style="@style/MyImageView"
-                    app:srcCompat="@drawable/logotype"
-                    android:layout_marginStart="10dp" />
-                <Button
-                    android:text="О ПРИЛОЖЕНИИ"
-                    android:backgroundTint="@color/button_color_up"
-                    android:textSize="13sp"
-                    style="@style/MyButtonStyleMargin"/>
-                <View
-                    style="@style/MyLineVertical"/>
-                <Button
-                    android:text="ПОДДЕРЖКА"
-                    android:backgroundTint="@color/button_color_up"
-                    android:textSize="13sp"
-                    style="@style/MyButtonStyleMargin"/>
-                <View
-                    style="@style/MyLineVertical"/>
+                    app:srcCompat="@drawable/menu"
+                    android:layout_margin="10dp"/>
                 <ImageView
+                    android:id="@+id/back"
                     style="@style/MyImageView"
-                    app:srcCompat="@drawable/exitbutton"/>
+                    app:srcCompat="@drawable/left_arrow"/>
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="Питание"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/jost_semibold"/>
             </LinearLayout>
-        </com.google.android.material.navigation.NavigationView>
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:orientation="vertical"
-                style="@style/MyLinerLayout">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    style="@style/MyLinerLayout">
-                        <ImageView
-                            android:id="@+id/dropdown_menu"
-                            style="@style/MyImageView"
-                            app:srcCompat="@drawable/menu"
-                            android:layout_margin="10dp"/>
-                        <ImageView
-                            android:id="@+id/back"
-                            style="@style/MyImageView"
-                            app:srcCompat="@drawable/left_arrow"/>
-                    <TextView
-                        style="@style/MyTextView"
-                        android:layout_width="match_parent"
-                        android:text="Мероприятия"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/jost_semibold"/>
-                </LinearLayout>
-                <ImageView
-                    android:layout_marginTop="10dp"
-                    android:layout_height="240dp"
-                    android:layout_width="match_parent"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/school4"/>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerViewEvents"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_marginTop="10dp"/>
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_height="240dp"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/school6"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewNutrition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp" />
+
             <FrameLayout
                 style="@style/MyLinerLayout"
                 android:background="#E3D5CA">
@@ -159,7 +157,7 @@
                     android:textSize="10sp"
                     android:layout_marginRight="10dp"/>
             </LinearLayout>
-            </LinearLayout>
+        </LinearLayout>
         </ScrollView>
     </LinearLayout>
 </RelativeLayout>

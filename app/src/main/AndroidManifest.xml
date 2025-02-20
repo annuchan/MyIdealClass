@@ -6,6 +6,17 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -19,6 +30,66 @@
         android:theme="@style/Theme.MyIdealClass"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".Start_Administration"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_asset_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Asset_shedule_edit_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Asset_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Delete_event_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_event_admin"
+            android:exported="false" />
+        <activity
+            android:name=".add_event_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Event_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Final_grades_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Add_evalutions_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Evalution_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Delete_Homework"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_homework_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Add_Homework_Admin"
+            android:exported="false" />
+        <activity
+            android:name=".Homework_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Start_activity_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".Nutrition_user"
+            android:exported="false" />
+        <activity
+            android:name=".Autorization"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Homework_user"
             android:exported="false" />
@@ -36,9 +107,6 @@
             android:exported="false" />
         <activity
             android:name=".Event_User"
-            android:exported="false" />
-        <activity
-            android:name=".Events_user"
             android:exported="false" />
 
         <provider
@@ -71,13 +139,7 @@
             android:exported="false" />
         <activity
             android:name=".StartActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

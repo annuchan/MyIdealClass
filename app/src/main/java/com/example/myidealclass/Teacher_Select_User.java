@@ -2,6 +2,7 @@ package com.example.myidealclass;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,6 +39,23 @@ public class Teacher_Select_User extends AppCompatActivity {
         apiService = RetrofitClient.getApiService();
 
         loadTeachers();
+        RetrofitClient.getApiService().getSubjects().enqueue(new Callback<List<Subject>>() {
+            @Override
+            public void onResponse(Call<List<Subject>> call, Response<List<Subject>> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    List<Subject> subjects = response.body();
+                    CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(Teacher_Select_User.this, subjects);
+                    Spinner spinner = findViewById(R.id.my_spinner);
+                    spinner.setAdapter(adapter);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Subject>> call, Throwable t) {
+                Log.e("API_ERROR", "Ошибка загрузки данных", t);
+            }
+        });
+
     }
 
     private void loadTeachers() {

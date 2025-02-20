@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit_asset_admin"
+    android:background="#EDEDE9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top">
+        <com.google.android.material.navigation.NavigationView
+            style="@style/MyUpBar">
+            <LinearLayout
+                android:orientation="horizontal"
+                style="@style/MyLinerLayout">
+                <ImageView
+                    android:id="@+id/startactivity"
+                    style="@style/MyImageView"
+                    app:srcCompat="@drawable/logotype"
+                    android:layout_marginStart="10dp" />
+                <Button
+                    android:text="О ПРИЛОЖЕНИИ"
+                    android:backgroundTint="@color/button_color_up"
+                    android:textSize="13sp"
+                    style="@style/MyButtonStyleMargin"/>
+                <View
+                    style="@style/MyLineVertical"/>
+                <Button
+                    android:text="ПОДДЕРЖКА"
+                    android:backgroundTint="@color/button_color_up"
+                    android:textSize="13sp"
+                    style="@style/MyButtonStyleMargin"/>
+                <View
+                    style="@style/MyLineVertical"/>
+                <ImageView
+                    style="@style/MyImageView"
+                    app:srcCompat="@drawable/exitbutton"/>
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            style="@style/MyLinerLayout">
+            <LinearLayout
+                android:orientation="horizontal"
+                style="@style/MyLinerLayout">
+                <ImageView
+                    android:id="@+id/dropdown_menu"
+                    style="@style/MyImageView"
+                    app:srcCompat="@drawable/menu"
+                    android:layout_margin="10dp"/>
+                <ImageView
+                    android:id="@+id/back"
+                    style="@style/MyImageView"
+                    app:srcCompat="@drawable/left_arrow"/>
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="Редактировать информацию"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/jost_semibold"/>
+            </LinearLayout>
+            <TextView
+                style="@style/MyTextView"
+                android:layout_width="match_parent"
+                android:text="На этой странице вы можете редактировать расписание вашего кружка или основной информации вашего кружка"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MyButtonStyle"
+                android:hint="Введите описание кружка"
+                android:padding="10dp"
+                android:layout_margin="10dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Изменить фото"
+                style="@style/MyButtonStyle"
+                android:padding="10dp"/>
+            <ImageView
+                android:id="@+id/selectedImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:background="#E3D5CA"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Сохранить"
+                style="@style/MyButtonStyle"
+                android:padding="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

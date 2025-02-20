@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".School_asset_user"
+    tools:context=".Homework_admin"
     android:background="#EDEDE9">
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,11 +13,8 @@
         android:orientation="vertical"
         android:gravity="top">
         <com.google.android.material.navigation.NavigationView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#E3D5CA"
-            android:minHeight="40dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+            style="@style/MyUpBar"
+            android:background="#E3D5CA">
             <LinearLayout
                 android:orientation="horizontal"
                 style="@style/MyLinerLayout">
@@ -45,66 +42,50 @@
                     app:srcCompat="@drawable/exitbutton"/>
             </LinearLayout>
         </com.google.android.material.navigation.NavigationView>
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
             <LinearLayout
                 android:orientation="vertical"
                 style="@style/MyLinerLayout">
                 <LinearLayout
                     android:orientation="horizontal"
                     style="@style/MyLinerLayout">
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="wrap_content"
-                        style="@style/MyLinerLayout">
-                        <ImageView
-                            android:id="@+id/dropdown_menu"
-                            style="@style/MyImageView"
-                            app:srcCompat="@drawable/menu"
-                            android:layout_margin="10dp"/>
-                        <ImageView
-                            android:id="@+id/back"
-                            style="@style/MyImageView"
-                            app:srcCompat="@drawable/left_arrow"/>
-                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/dropdown_menu"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/menu"
+                        android:layout_margin="10dp"/>
+                    <ImageView
+                        android:id="@+id/back"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/left_arrow"/>
                     <TextView
                         style="@style/MyTextView"
                         android:layout_width="match_parent"
-                        android:text="Актив школы"
+                        android:text="Домашнее задание"
                         android:textSize="25sp"
                         android:fontFamily="@font/jost_semibold"/>
                 </LinearLayout>
-                <ImageView
-                    android:layout_marginTop="10dp"
-                    android:layout_height="240dp"
-                    android:layout_width="match_parent"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/school4"/>
                 <TextView
                     style="@style/MyTextView"
                     android:layout_width="match_parent"
-                    android:text="Записаться"
-                    android:fontFamily="@font/jost_semibold" />
-                <TextView
-                    style="@style/MyTextView"
-                    android:layout_width="match_parent"
-                    android:text="Если вы хотите отдать своего ребенка в понравившуюся секцию перейдите по кнопке ниже и заполните форму."/>
+                    android:text="На этой странице вы можете добавлять, редактировать или вовсе удалить домашнее задание"/>
                 <Button
-                    android:id="@+id/moreButton"
-                    android:text="Записаться"
-                    style="@style/MyButtonStyle"/>
-                <TextView
-                    style="@style/MyTextView"
-                    android:layout_width="match_parent"
-                    android:text="Ниже представлен список доступных секций:"/>
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerViewAssets"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_marginTop="10dp"/>
+                    android:text="Добавить домашнее задание"
+                    style="@style/MyButtonStyle"
+                    android:padding="10dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Редактировать домашнее задание"
+                    style="@style/MyButtonStyle"
+                    android:padding="10dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Удалить домашнее задание"
+                    style="@style/MyButtonStyle"
+                    android:padding="10dp"/>
             </LinearLayout>
-        </ScrollView>
     </LinearLayout>
 </RelativeLayout>

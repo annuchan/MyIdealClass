@@ -33,6 +33,7 @@ public class Dropdown_Menu {
         TextView item6 = popupView.findViewById(R.id.menu_item6);
         TextView item7 = popupView.findViewById(R.id.menu_item7);
         TextView item8 = popupView.findViewById(R.id.menu_item8);
+        TextView item9 = popupView.findViewById(R.id.menu_item9);
 
         // Обработчики кликов
         item1.setOnClickListener(v -> {
@@ -52,14 +53,17 @@ public class Dropdown_Menu {
         });
         item4.setOnClickListener(v -> {
             Toast.makeText(context, "Вы перешли на страницу уведомлений об учебе", Toast.LENGTH_SHORT).show();
+            context.startActivity(new Intent(context, Important_information_user.class));
             popupWindow.dismiss();
         });
         item5.setOnClickListener(v -> {
             Toast.makeText(context, "Вы перешли на страницу мероприятий", Toast.LENGTH_SHORT).show();
+            context.startActivity(new Intent(context, Event_User.class));
             popupWindow.dismiss();
         });
         item6.setOnClickListener(v -> {
             Toast.makeText(context, "Вы перешли на страницу актива школы", Toast.LENGTH_SHORT).show();
+            context.startActivity(new Intent(context, School_asset_user.class));
             popupWindow.dismiss();
         });
         item7.setOnClickListener(v -> {
@@ -69,6 +73,11 @@ public class Dropdown_Menu {
         item8.setOnClickListener(v -> {
             Toast.makeText(context, "Вы перешли на страницу учителей", Toast.LENGTH_SHORT).show();
             context.startActivity(new Intent(context, Teacher_Select_User.class));
+            popupWindow.dismiss();
+        });
+        item9.setOnClickListener(v -> {
+            Toast.makeText(context, "Вы перешли на ваших секций", Toast.LENGTH_SHORT).show();
+            context.startActivity(new Intent(context, School_asset_my_user.class));
             popupWindow.dismiss();
         });
 

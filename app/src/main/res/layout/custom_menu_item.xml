@@ -62,4 +62,11 @@
         android:id="@+id/menu_item8"
         android:text="Список учителей"
         android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item9"
+        android:text="Мои секции"
+        android:clickable="true"/>
 </LinearLayout>

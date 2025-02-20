@@ -1,6 +1,8 @@
 package com.example.myidealclass;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -35,6 +37,14 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        int userId = sharedPreferences.getInt("userId", -1); // Если значение не найдено, вернется -1
+        if (userId == -1) {
+            Log.e("StartActivity", "Не удалось получить ID пользователя");
+        } else {
+            Log.d("StartActivity", "Получен ID пользователя: " + userId);
+        }
 
         findViewById(R.id.rightarrow).setOnClickListener(new View.OnClickListener() {
             @Override

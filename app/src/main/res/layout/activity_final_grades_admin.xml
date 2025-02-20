@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Final_grades_admin"
+    android:background="#EDEDE9">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top">
+    <com.google.android.material.navigation.NavigationView
+        style="@style/MyUpBar"
+        android:background="#E3D5CA">
+        <LinearLayout
+            android:orientation="horizontal"
+            style="@style/MyLinerLayout">
+            <ImageView
+                android:id="@+id/startactivity"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/logotype"
+                android:layout_marginStart="10dp" />
+            <Button
+                android:text="О ПРИЛОЖЕНИИ"
+                android:backgroundTint="@color/button_color_up"
+                android:textSize="13sp"
+                style="@style/MyButtonStyleMargin"/>
+            <View
+                style="@style/MyLineVertical"/>
+            <Button
+                android:text="ПОДДЕРЖКА"
+                android:backgroundTint="@color/button_color_up"
+                android:textSize="13sp"
+                style="@style/MyButtonStyleMargin"/>
+            <View
+                style="@style/MyLineVertical"/>
+            <ImageView
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/exitbutton"/>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+    <LinearLayout
+        android:orientation="vertical"
+        style="@style/MyLinerLayout">
+        <LinearLayout
+            android:orientation="horizontal"
+            style="@style/MyLinerLayout">
+            <ImageView
+                android:id="@+id/dropdown_menu"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/menu"
+                android:layout_margin="10dp"/>
+            <ImageView
+                android:id="@+id/back"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/left_arrow"/>
+            <TextView
+                style="@style/MyTextView"
+                android:layout_width="match_parent"
+                android:text="Итоговые оценки"
+                android:textSize="25sp"
+                android:fontFamily="@font/jost_semibold"/>
+        </LinearLayout>
+        <TextView
+            style="@style/MyTextView"
+            android:layout_width="match_parent"
+            android:text="На этой странице вы можете добавлять, редактировать или вовсе удалить итоговые оценки"/>
+        <Spinner
+            android:id="@+id/class_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="#E3D5CA"
+            style="@style/MyTextView"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+
+        <!-- Список учеников -->
+        <ListView
+            android:id="@+id/student_list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/class_spinner"
+            android:background="#E3D5CA"
+            style="@style/MyTextView"
+            android:padding="10dp"
+            android:layout_margin="10dp"/>
+        <TableLayout
+            android:id="@+id/grades_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#E3D5CA"
+            android:padding="10dp"
+            android:stretchColumns="*"
+            android:showDividers="middle"
+            android:dividerHeight="1dp">
+        </TableLayout>
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            style="@style/MyButtonStyle"
+            android:padding="10dp"/>
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>
