@@ -16,8 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#E3D5CA"
-        android:minHeight="40dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        android:minHeight="40dp">
         <LinearLayout
             android:orientation="horizontal"
             style="@style/MyLinerLayout">
@@ -58,12 +57,16 @@
                 android:id="@+id/dropdown_menu"
                 style="@style/MyImageView"
                 app:srcCompat="@drawable/menu"
-                android:layout_marginLeft="10dp"/>
+                android:layout_margin="10dp"/>
+            <ImageView
+                android:id="@+id/back"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/left_arrow"/>
             <TextView
                 style="@style/MyTextView"
                 android:layout_width="match_parent"
                 android:text="О приложении"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:fontFamily="@font/jost_semibold"/>
         </LinearLayout>
     <LinearLayout

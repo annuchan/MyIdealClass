@@ -28,7 +28,12 @@ public class Autorization extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autorization);
-
+        NoActionBar.hideActionBar(this);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
         Button loginButton = findViewById(R.id.moreButton); // Пример кнопки входа
@@ -74,6 +79,12 @@ public class Autorization extends AppCompatActivity {
                     switch(roleId) {
                         case 1:
                             intent = new Intent(Autorization.this, StartActivity.class);
+                            break;
+                        case 2:
+                            intent = new Intent(Autorization.this, Start_activity_teacher.class);
+                            break;
+                        case 3:
+                            intent = new Intent(Autorization.this, Start_Administration.class);
                             break;
                         default:
                             Toast.makeText(Autorization.this, "Неизвестная роль", Toast.LENGTH_SHORT).show();

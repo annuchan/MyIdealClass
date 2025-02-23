@@ -20,20 +20,28 @@ public class StartActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_start3);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
-        ImageView dropdownMenu = findViewById(R.id.dropdown_menu);
 
-        dropdownMenu.setOnClickListener(view -> showCustomPopupMenu(view));
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start3);
+        NoActionBar.hideActionBar(this);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
         findViewById(R.id.leftarrow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Переход на другую активность при клике на левую стрелку
                 Intent intent = new Intent(StartActivity2.this, StartActivity.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.moreButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Переход на другую активность при клике на левую стрелку
+                Intent intent = new Intent(StartActivity2.this, Main_Teacher_User.class); // замените на нужную активность
                 startActivity(intent);
             }
         });
@@ -46,61 +54,50 @@ public class StartActivity2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.supportbutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity2.this, Support.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.startactivity2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity2.this, StartActivity.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.startactivity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity2.this, StartActivity.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.about_app).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity2.this, About_the_app.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
+        ImageView exitButton = findViewById(R.id.exitbutton);
+
+        // Устанавливаем обработчик клика на кнопку
+        exitButton.setOnClickListener(v -> {
+            // Логика выхода
+            logout();
+        });
+
+        ImageView dropdownMenu = findViewById(R.id.dropdown_menu);
+        dropdownMenu.setOnClickListener(view -> showCustomPopupMenu(view));
     }
-
+    private void logout() {
+        finish();
+    }
     private void showCustomPopupMenu(View view) {
-        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.custom_menu_item, null);
-        PopupWindow popupWindow = new PopupWindow(popupView,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                true);
-        TextView item1 = popupView.findViewById(R.id.menu_item1);
-        TextView item2 = popupView.findViewById(R.id.menu_item2);
-        TextView item3 = popupView.findViewById(R.id.menu_item3);
-        TextView item4 = popupView.findViewById(R.id.menu_item4);
-        TextView item5 = popupView.findViewById(R.id.menu_item5);
-        TextView item6 = popupView.findViewById(R.id.menu_item6);
-        TextView item7 = popupView.findViewById(R.id.menu_item7);
-        TextView item8 = popupView.findViewById(R.id.menu_item8);
-
-
-        item1.setOnClickListener(v -> {
-            Toast.makeText(this, "Вы перешли на страницу школы", Toast.LENGTH_SHORT).show();
-            popupWindow.dismiss();
-        });
-
-        item2.setOnClickListener(v -> {
-            Toast.makeText(this, "Вы перешли на страницу электронного дневника", Toast.LENGTH_SHORT).show();
-            popupWindow.dismiss();
-        });
-
-        item3.setOnClickListener(v -> {
-            Toast.makeText(this, "Вы перешли на страницу домашнего задания", Toast.LENGTH_SHORT).show();
-            popupWindow.dismiss();
-        });
-        item4.setOnClickListener(v -> {
-            Toast.makeText(this, "Вы перешли на страницу уведомлений об учебе", Toast.LENGTH_SHORT).show();
-            popupWindow.dismiss();
-        });
-        item5.setOnClickListener(v -> {
-            Toast.makeText(this, "Вы перешли на страницу мероприятий", Toast.LENGTH_SHORT).show();
-            popupWindow.dismiss();
-        });
-        item6.setOnClickListener(v -> {
-            Toast.makeText(this, "Вы перешли на страницу актива школы", Toast.LENGTH_SHORT).show();
-            popupWindow.dismiss();
-        });
-        item7.setOnClickListener(v -> {
-            Toast.makeText(this, "Вы перешли на страницу питания", Toast.LENGTH_SHORT).show();
-            popupWindow.dismiss();
-        });
-        item8.setOnClickListener(v -> {
-            Toast.makeText(this, "Вы перешли на страницу учителей", Toast.LENGTH_SHORT).show();
-            popupWindow.dismiss();
-        });
-
-        // Показываем PopupWindow
-        popupWindow.showAsDropDown(view);
+        Dropdown_Menu.showCustomPopupMenu(view, this);
     }
 }

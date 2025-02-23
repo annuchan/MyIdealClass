@@ -86,4 +86,11 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherV
             professionalDevelopment = itemView.findViewById(R.id.Professional_development);
         }
     }
+
+    // Используйте правильную переменную для обновления списка
+    public void updateTeachers(List<Teacher> teacherList) {
+        this.teacherList = teacherList;
+        notifyDataSetChanged();  // Обновляем адаптер
+    }
 }
+

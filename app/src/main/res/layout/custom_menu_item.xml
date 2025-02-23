@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#E3D5CA"
     android:paddingLeft="15dp"
@@ -15,20 +15,23 @@
         android:clickable="true"/>
     <View
         style="@style/MenuLineHorizontal"/>
-    <TextView
+
+    <!-- <TextView
         style="@style/MyTextView"
         android:id="@+id/menu_item2"
         android:text="Электронный дневник"
-        android:clickable="true"/>
-    <View
-        style="@style/MenuLineHorizontal"/>
-    <TextView
+        android:clickable="true"/> -->
+    <!-- <View
+        style="@style/MenuLineHorizontal"/> -->
+
+    <!-- <TextView
         style="@style/MyTextView"
         android:id="@+id/menu_item3"
         android:text="Домашнее задание"
-        android:clickable="true"/>
-    <View
-        style="@style/MenuLineHorizontal"/>
+        android:clickable="true"/> -->
+    <!-- <View
+        style="@style/MenuLineHorizontal"/> -->
+
     <TextView
         style="@style/MyTextView"
         android:id="@+id/menu_item4"
@@ -70,3 +73,4 @@
         android:text="Мои секции"
         android:clickable="true"/>
 </LinearLayout>
+

@@ -5,19 +5,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
-import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import java.util.List;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -45,7 +35,20 @@ public class StartActivity extends AppCompatActivity {
         } else {
             Log.d("StartActivity", "Получен ID пользователя: " + userId);
         }
-
+        findViewById(R.id.startactivity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, StartActivity.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.startactivity2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, StartActivity.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
         findViewById(R.id.rightarrow).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +57,30 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.moreButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Переход на другую активность при клике на правую стрелку
+                Intent intent = new Intent(StartActivity.this, MainParent.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.supportbutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Переход на другую активность при клике на правую стрелку
+                Intent intent = new Intent(StartActivity.this, Support.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
+        ImageView exitButton = findViewById(R.id.exitbutton);
+
+        // Устанавливаем обработчик клика на кнопку
+        exitButton.setOnClickListener(v -> {
+            // Логика выхода
+            logout();
+        });
+
     }
 
     private void showCustomPopupMenu(View view) {
@@ -63,5 +90,8 @@ public class StartActivity extends AppCompatActivity {
     public void about_app(View view) {
         Intent intent = new Intent(StartActivity.this, About_the_app.class); // замените на нужную активность
         startActivity(intent);
+    }
+    private void logout() {
+        finish();
     }
 }

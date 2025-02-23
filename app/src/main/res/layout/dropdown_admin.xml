@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E3D5CA"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item1"
+        android:text="Редактировать информацию о школе"
+        android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item2"
+        android:text="Важная информация"
+        android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item3"
+        android:text="Мероприятия"
+        android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>
+   <!-- <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item4"
+        android:text="Питание"
+        android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>-->
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item5"
+        android:text="Кружки/секции"
+        android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>
+    <!--  <TextView
+          style="@style/MyTextView"
+          android:id="@+id/menu_item6"
+          android:text="Учителя"
+          android:clickable="true"/>
+      <View
+          style="@style/MenuLineHorizontal"/>
+      <TextView
+          style="@style/MyTextView"
+          android:id="@+id/menu_item7"
+          android:text="Ученики"
+          android:clickable="true"/>
+      <View
+          style="@style/MenuLineHorizontal"/>
+      <TextView
+          style="@style/MyTextView"
+          android:id="@+id/menu_item8"
+          android:text="Родители"
+          android:clickable="true"/>-->
+  </LinearLayout>

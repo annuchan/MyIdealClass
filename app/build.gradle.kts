@@ -3,6 +3,10 @@ plugins {
 }
 
 android {
+    packagingOptions {
+        exclude("META-INF/NOTICE.md")
+        exclude("META-INF/LICENSE.md")
+    }
     namespace = "com.example.myidealclass"
     compileSdk = 35
 
@@ -45,4 +49,6 @@ dependencies {
             "")
     implementation ("com.google.code.gson:gson:2.8.9")
     implementation ("androidx.core:core:1.7.0")
+    implementation ("com.sun.mail:android-mail:1.6.7")
+    implementation ("com.sun.mail:android-activation:1.6.7")
 }

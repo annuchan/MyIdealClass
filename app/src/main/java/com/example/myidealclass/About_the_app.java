@@ -1,9 +1,14 @@
 package com.example.myidealclass;
 
+import static com.example.myidealclass.Dropdown_Menu.showCustomPopupMenu;
+
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -20,11 +25,9 @@ public class About_the_app extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().hide();
-        }
-        EdgeToEdge.enable(this);
+
         setContentView(R.layout.activity_about_the_app);
+        NoActionBar.hideActionBar(this);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -44,5 +47,19 @@ public class About_the_app extends AppCompatActivity {
         Typeface typeface1 = ResourcesCompat.getFont(this, R.font.jost_semibold);
         spannableString1.setSpan(new CustomTypefaceSpan("", typeface1), 0, 19, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         textView1.setText(spannableString1);
+        //Обработчики всех кнопок
+        //Обработчик кнопки дропдавн меню
+        ImageView dropdownMenu = findViewById(R.id.dropdown_menu);
+        dropdownMenu.setOnClickListener(view -> showCustomPopupMenu(view));
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Переход на другую активность при клике на левую стрелку
+               finish();
+            }
+        });
+    }
+    private void showCustomPopupMenu(View view) {
+        Dropdown_Menu.showCustomPopupMenu(view, this);
     }
 }

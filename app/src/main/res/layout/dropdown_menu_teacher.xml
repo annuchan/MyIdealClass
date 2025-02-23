@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E3D5CA"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item1"
+        android:text="Домашнее задание"
+        android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item2"
+        android:text="Оценки"
+        android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item3"
+        android:text="Итоговые оценки"
+        android:clickable="true"/>
+    <View
+        style="@style/MenuLineHorizontal"/>
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item4"
+        android:text="Кружки/секции"
+        android:clickable="true"/>
+    <!-- <View
+        style="@style/MenuLineHorizontal"/>
+    <TextView
+        style="@style/MyTextView"
+        android:id="@+id/menu_item5"
+        android:text="Питание"
+        android:clickable="true"/> -->
+</LinearLayout>

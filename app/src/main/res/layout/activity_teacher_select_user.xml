@@ -25,6 +25,7 @@
                     app:srcCompat="@drawable/logotype"
                     android:layout_marginStart="10dp" />
                 <Button
+                    android:id="@+id/about_app"
                     android:text="О ПРОГРАММЕ"
                     android:backgroundTint="@color/button_color_up"
                     android:textSize="13sp"
@@ -32,6 +33,7 @@
                 <View
                     style="@style/MyLineVertical"/>
                 <Button
+                    android:id="@+id/supportbutton"
                     android:text="ПОДДЕРЖКА"
                     android:backgroundTint="@color/button_color_up"
                     android:textSize="13sp"
@@ -39,6 +41,7 @@
                 <View
                     style="@style/MyLineVertical"/>
                 <ImageView
+                    android:id="@+id/exitbutton"
                     style="@style/MyImageView"
                     app:srcCompat="@drawable/exitbutton"/>
             </LinearLayout>
@@ -87,7 +90,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:background="#E3D5CA"
-                    android:padding="10dp"
+                    android:padding="0dp"
                     />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,81 +107,33 @@
                     android:background="#E3D5CA">
                 </FrameLayout>
                 <FrameLayout
+                    android:id="@+id/footer"
                     style="@style/MyLinerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
                     android:background="#E3D5CA">
                     <LinearLayout
-                        style="@style/MyLinerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:gravity="top|center">
-                        <LinearLayout
-                            style="@style/MyLinerLayout"
-                            android:layout_width="wrap_content"
-                            android:orientation="vertical"
-                            android:gravity="top|center">
-                            <TextView
-                                style="@style/MyTextView"
-                                android:text="О НАС"
-                                android:textSize="23dp"/>
-                            <TextView
-                                style="@style/MyTextView"
-                                android:text="О приложении"/>
-                            <TextView
-                                style="@style/MyTextView"
-                                android:text="Контакты"/>
-                            <TextView
-                                style="@style/MyTextView"
-                                android:text="Новости"/>
-                            <LinearLayout
-                                style="@style/MyLinerLayout"
-                                android:orientation="horizontal">
-                                <ImageView
-                                    style="@style/MyImageView"
-                                    app:srcCompat="@drawable/vk"
-                                    android:contentDescription="Перейти в вк"/>
-                                <ImageView
-                                    style="@style/MyImageView"
-                                    app:srcCompat="@drawable/telegram"
-                                    android:contentDescription="Перейти в телеграмм"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            style="@style/MyLinerLayout"
-                            android:orientation="vertical"
-                            android:gravity="top|center">
-                            <TextView
-                                style="@style/MyTextView"
-                                android:text="ВОЗМОЖНОСТИ"
-                                android:textSize="23dp"/>
-                            <TextView
-                                style="@style/MyTextView"
-                                android:text="Родителям"/>
-                            <TextView
-                                style="@style/MyTextView"
-                                android:text="Учителям"/>
-                        </LinearLayout>
+                        style="@style/MyLinerLayout"
+                        android:background="#D6CCC2"
+                        android:padding="10dp">
+                        <ImageView
+                            android:id="@+id/startactivity2"
+                            style="@style/MyImageView"
+                            app:srcCompat="@drawable/logotype"
+                            android:layout_marginStart="10dp" />
+                        <TextView
+                            style="@style/MyTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:text="Пользовательское соглашение"
+                            android:textSize="15sp"/>
                     </LinearLayout>
                 </FrameLayout>
-
-                <LinearLayout
-                    style="@style/MyLinerLayout"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:background="#D6CCC2">
-                    <TextView
-                        style="@style/MyTextView"
-                        android:layout_width="0dp"
-                        android:text="Пользовательское соглашение"
-                        android:textSize="10sp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="10dp"/>
-                    <TextView
-                        style="@style/MyTextView"
-                        android:text="© 2024 - 2025 «Мой идеальный класс»"
-                        android:gravity="end"
-                        android:textSize="10sp"
-                        android:layout_marginRight="10dp"/>
-                </LinearLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

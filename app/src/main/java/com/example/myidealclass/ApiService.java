@@ -18,6 +18,8 @@ public interface ApiService {
     Call<Director> getDirectorInfo();
     @GET("/api/teachers")
     Call<List<Teacher>> getTeachers();
+    @GET("/api/teachers")
+    Call<List<Teacher>> getTeachersBySubject(@Query("subjectId") int subjectId);  // Использование query-параметра
     @GET("/api/events")
     Call<List<Event>> getEvents();
     @GET("/api/Important_information")
@@ -30,5 +32,6 @@ public interface ApiService {
     Call<List<Subject>> getSubjects();
     @GET("/api/scheduleDetailed")
     Call<List<Club>> getClubs(@Query("userId") int userId);
+
 
 }
