@@ -30,6 +30,13 @@ public class Start_activity_teacher extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.event).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Start_activity_teacher.this, Event_admin.class); // замените на нужную активность
+                startActivity(intent);
+            }
+        });
 
         findViewById(R.id.startactivity2).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,16 +63,16 @@ public class Start_activity_teacher extends AppCompatActivity {
 
         // Устанавливаем обработчик клика на кнопку
         exitButton.setOnClickListener(v -> {
-            // Логика выхода
-            logout();
+            Intent intent = new Intent(this, Autorization.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
 
         ImageView dropdownMenu = findViewById(R.id.dropdown_menu);
         dropdownMenu.setOnClickListener(view -> showCustomPopupMenu(view));
     }
-    private void logout() {
-        finish();
-    }
+
     private void showCustomPopupMenu(View view) {
         Dropdown_menu_Teacher.showCustomPopupMenu(view, this);
     }

@@ -65,8 +65,10 @@ public class MainParent extends AppCompatActivity {
 
         // Устанавливаем обработчик клика на кнопку
         exitButton.setOnClickListener(v -> {
-            // Логика выхода
-            logout();
+            Intent intent = new Intent(this, Autorization.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
         findViewById(R.id.leftarrow).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,8 +97,5 @@ public class MainParent extends AppCompatActivity {
     public void about_app(View view) {
         Intent intent = new Intent(MainParent.this, About_the_app.class); // замените на нужную активность
         startActivity(intent);
-    }
-    private void logout() {
-        finish();
     }
 }

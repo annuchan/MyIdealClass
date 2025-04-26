@@ -1,5 +1,6 @@
 package com.example.myidealclass;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -32,6 +33,9 @@ public interface ApiService {
     Call<List<Subject>> getSubjects();
     @GET("/api/scheduleDetailed")
     Call<List<Club>> getClubs(@Query("userId") int userId);
-
+    @GET("/api/Homework_teacher")
+    Call<List<HomeworkItem>> getClasses();
+    @POST("add-homework")
+    Call<ResponseBody> addHomework(@Body HomeworkRequest homeworkRequest);
 
 }

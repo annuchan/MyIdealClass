@@ -20,11 +20,4 @@
         style="@style/MyTextView"
         android:textSize="15sp"/>
 
-    <TextView
-        android:id="@+id/tvGrade"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:padding="8dp"
-        style="@style/MyTextView"
-        android:textSize="15sp"/>
 </TableRow>

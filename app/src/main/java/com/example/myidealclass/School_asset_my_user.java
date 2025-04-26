@@ -28,20 +28,24 @@ public class School_asset_my_user extends AppCompatActivity {
     private SectionsAdapter adapter; // Используем SectionsAdapter
     private ApiService apiService;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_school_asset_my_user); // Устанавливаем разметку
-        adapter = new SectionsAdapter(new ArrayList<>());
-        recyclerView.setAdapter(adapter); // Устанавливаем адаптер для RecyclerView
 
         // Инициализация RecyclerView
         recyclerView = findViewById(R.id.recyclerViewAssetmychild);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        // Теперь создаем адаптер и устанавливаем его в RecyclerView
+        adapter = new SectionsAdapter(new ArrayList<>());
+        recyclerView.setAdapter(adapter); // Теперь recyclerView не будет null
+
         apiService = RetrofitClient.getApiService();
 
         loadSchoolAssets();
+
         NoActionBar.hideActionBar(this);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -81,16 +85,16 @@ public class School_asset_my_user extends AppCompatActivity {
 
         // Устанавливаем обработчик клика на кнопку
         exitButton.setOnClickListener(v -> {
-            // Логика выхода
-            logout();
+            Intent intent = new Intent(this, Autorization.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
 
         ImageView dropdownMenu = findViewById(R.id.dropdown_menu);
         dropdownMenu.setOnClickListener(view -> showCustomPopupMenu(view));
     }
-    private void logout() {
-        finish();
-    }
+
     private void showCustomPopupMenu(View view) {
         Dropdown_Menu.showCustomPopupMenu(view, this);
     }

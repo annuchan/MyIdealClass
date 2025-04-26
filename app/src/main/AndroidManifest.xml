@@ -31,6 +31,129 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".edit_student"
+            android:exported="false" />
+        <activity
+            android:name=".add_student"
+            android:exported="false" />
+        <activity
+            android:name=".student_admin"
+            android:exported="false" />
+        <activity
+            android:name=".edit_parent"
+            android:exported="false" />
+        <activity
+            android:name=".add_parent"
+            android:exported="false" />
+        <activity
+            android:name=".parent_admin"
+            android:exported="false" />
+        <activity
+            android:name=".edit_passport"
+            android:exported="false" />
+        <activity
+            android:name=".edit_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".add_passport"
+            android:exported="false" />
+        <activity
+            android:name=".add_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".teacher_admin"
+            android:exported="false" />
+        <activity
+            android:name=".add_asset_admin"
+            android:exported="false" />
+        <activity
+            android:name=".edit_asset_admin"
+            android:exported="false" />
+        <activity
+            android:name=".assets_admin"
+            android:exported="false" />
+        <activity
+            android:name=".edit_school_page"
+            android:exported="false" />
+        <activity
+            android:name=".school_page_admin"
+            android:exported="false" />
+        <activity
+            android:name=".edit_shedule"
+            android:exported="false" />
+        <activity
+            android:name=".schedule_admin"
+            android:exported="false" />
+        <activity
+            android:name=".edit_important_information"
+            android:exported="false" />
+        <activity
+            android:name=".add_important_information"
+            android:exported="false" />
+        <activity
+            android:name=".main_admin"
+            android:exported="false" />
+        <activity
+            android:name=".important_information_admin"
+            android:exported="false" />
+        <activity
+            android:name=".profile_user"
+            android:exported="false" />
+        <activity
+            android:name=".result_evalution_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".evalution_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".club_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".edit_measure"
+            android:exported="false" />
+        <activity
+            android:name=".add_measure"
+            android:exported="false" />
+        <activity
+            android:name=".measure_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".edit_homework"
+            android:exported="false" />
+        <activity
+            android:name=".add_homework"
+            android:exported="false" />
+        <activity
+            android:name=".evalutions_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.MyIdealClass.NoActionBar" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".main_teacher_more"
+            android:exported="false" />
+        <activity
+            android:name=".main_teacher"
+            android:exported="false" />
+        <activity
+            android:name=".forgot_phone_number"
+            android:exported="false" />
+        <activity
+            android:name=".Forgot_login"
+            android:exported="false" />
+        <activity
+            android:name=".Forgot_email"
+            android:exported="false" />
+        <activity
+            android:name=".forgot_account"
+            android:exported="false" />
+        <activity
             android:name=".Support"
             android:exported="false" />
         <activity

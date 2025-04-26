@@ -25,17 +25,6 @@
     <TextView
         style="@style/MyTextView"
         android:layout_width="match_parent"
-        android:text="Время:"
-        android:gravity="left"/>
-    <TextView
-        style="@style/MyTextView"
-        android:id="@+id/TermImportant_information"
-        android:layout_width="match_parent"
-        android:fontFamily="@font/jost_light"
-        android:gravity="left"/>
-    <TextView
-        style="@style/MyTextView"
-        android:layout_width="match_parent"
         android:text="Дата:"
         android:gravity="left"/>
     <TextView

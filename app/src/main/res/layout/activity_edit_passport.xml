@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".edit_passport"
+    android:background="#EDEDE9"
+    tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="60dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Заголовок -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    style="@style/MyLinerLayout"
+                    android:gravity="top"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/dropdown_menu"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/menu"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"/>
+                    <ImageView
+                        android:id="@+id/back"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/left_arrow"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        style="@style/MyTextView"
+                        android:layout_width="match_parent"
+                        android:text="Редактирование паспорта"
+                        android:textSize="24dp"
+                        android:fontFamily="@font/jost_semibold"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="Редактировать паспорт. Обязательно перепроверьте правильность ввода и сохраните." />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:id="@+id/addTitle"
+                    android:hint="Введите серию"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:id="@+id/addDescrip"
+                    android:hint="Введите номер"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:id="@+id/addtype"
+                    android:hint="Введите код подразделения"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите кем выдано"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите дата выдачи"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <Button
+                    android:id="@+id/moreButton"
+                    android:text="сохранить"
+                    style="@style/MyButtonStyle"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Нижняя навигация -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E3D5CA"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/user"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:padding="3dp" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/podrobnee"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            android:id="@+id/startactivity"
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/logotype"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/support"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/exitbutton"
+            android:id="@+id/exitbutton"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".evalutions_teacher"
+    android:background="#EDEDE9"
+    tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="60dp">
+
+        <!-- Заголовок -->
+        <LinearLayout
+            android:orientation="horizontal"
+            style="@style/MyLinerLayout"
+            android:gravity="top"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/dropdown_menu"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/menu"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                style="@style/MyTextView"
+                android:layout_width="match_parent"
+                android:text="Домашнее задание"
+                android:textSize="25dp"
+                android:fontFamily="@font/jost_semibold" />
+        </LinearLayout>
+
+        <!-- Подзаголовок -->
+        <TextView
+            style="@style/MyTextView"
+            android:layout_width="match_parent"
+            android:text="В этом разделе вы можете добавлять, редактировать и удалять домашние задания для учеников!" />
+
+        <!-- Класс -->
+        <Spinner
+            android:id="@+id/classSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minHeight="48dp"
+            android:contentDescription="Выберите класс" />
+
+        <!-- Дата и день недели -->
+        <LinearLayout
+            android:id="@+id/dateHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/currentDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Выбрать день"
+                style="@style/MyTextView"
+                android:layout_weight="1"
+                android:gravity="start"/>
+
+            <ImageView
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/details"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="end"
+                android:id="@+id/detailsImageView"/>
+        </LinearLayout>
+
+        <!-- Заголовки таблицы -->
+        <LinearLayout
+            android:id="@+id/headerRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                style="@style/MyTextView"
+                android:id="@+id/subjectHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Предмет"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                style="@style/MyTextView"
+                android:id="@+id/homeworkHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Домашнее задание"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeworkRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Список домашних заданий"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <!-- Нижняя навигация -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E3D5CA"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/user"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:padding="3dp" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/podrobnee"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            android:id="@+id/startactivity"
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/logotype"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/support"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/exitbutton"
+            android:id="@+id/exitbutton"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>
+

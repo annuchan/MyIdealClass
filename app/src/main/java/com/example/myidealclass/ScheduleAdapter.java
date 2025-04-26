@@ -11,6 +11,7 @@ import java.util.List;
 public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHolder> {
     private final List<HomeworkItem> scheduleList;
 
+    // Конструктор адаптера
     public ScheduleAdapter(List<HomeworkItem> scheduleList) {
         this.scheduleList = scheduleList;
     }
@@ -18,36 +19,33 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // inflating XML для каждого элемента в списке
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_schedule, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        // Получаем объект HomeworkItem по позиции
+        HomeworkItem item = scheduleList.get(position);
 
+        // Привязываем данные к элементам интерфейса
+        holder.subject.setText(item.getSubjectTitle()); // Название предмета
+        holder.homework.setText(item.getTask()); // Задание/домашка
     }
-
-//    @Override
-//    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-//        HomeworkItem item = scheduleList.get(position);
-//        holder.subject.setText(item.getSubject());
-//        holder.homework.setText(item.getHomework());
-//        holder.grade.setText(item.getGrade());
-//    }
 
     @Override
     public int getItemCount() {
-        return scheduleList.size();
+        return scheduleList.size(); // Возвращаем количество элементов в списке
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView subject, homework, grade;
+        TextView subject, homework;
 
         ViewHolder(View itemView) {
             super(itemView);
-            subject = itemView.findViewById(R.id.tvSubject);
-            homework = itemView.findViewById(R.id.tvHomework);
-            grade = itemView.findViewById(R.id.tvGrade);
+            subject = itemView.findViewById(R.id.tvSubject); // Ссылка на TextView для предмета
+            homework = itemView.findViewById(R.id.tvHomework); // Ссылка на TextView для задания
         }
     }
 }

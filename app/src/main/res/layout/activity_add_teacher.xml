@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_teacher"
+    android:background="#EDEDE9"
+    tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="60dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Заголовок -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    style="@style/MyLinerLayout"
+                    android:gravity="top"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/dropdown_menu"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/menu"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"/>
+                    <ImageView
+                        android:id="@+id/back"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/left_arrow"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        style="@style/MyTextView"
+                        android:layout_width="match_parent"
+                        android:text="Добавление учителя"
+                        android:textSize="25dp"
+                        android:fontFamily="@font/jost_semibold"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="Редактирование учителя. Обязательно перепроверьте правильность ввода и сохраните." />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:id="@+id/addTitle"
+                    android:hint="Введите фамилию учителя"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:id="@+id/addDescrip"
+                    android:hint="Введите имя учителя"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:id="@+id/addtype"
+                    android:hint="Введите отчество учителя"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите специальность"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите образование"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите стаж"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите академическую степень"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="*если нет, так и написать "
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите достижения"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите сертификат"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="*если нет, так и написать "
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:textSize="18sp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите квалификацию"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите где учитель получал образование"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:textSize="19dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите номер телефона"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите адрес эл. почты"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите адрес проживания"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <Spinner
+                    android:layout_margin="10dp"
+                    android:id="@+id/teacherSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="#E3D5CA"
+                    android:padding="0dp"
+                    />
+                <View
+                    style="@style/MyLineHorizontal"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/picture"
+                        android:layout_marginStart="10dp"
+                        android:padding="3dp" />
+                    <ImageView
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/calendar"
+                        android:layout_marginStart="10dp"
+                        android:padding="3dp" />
+
+                </LinearLayout>
+                <View
+                    style="@style/MyLineHorizontal"/>
+                <Button
+                    android:id="@+id/moreButton"
+                    android:text="Редактировать паспорт"
+                    style="@style/MyButtonStyle"
+                    android:layout_gravity="center"
+                    android:textSize="19dp"/>
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="или" />
+                <Button
+                    android:id="@+id/savebutton"
+                    android:text="Сохранить"
+                    style="@style/MyButtonStyle"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Нижняя навигация -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E3D5CA"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/user"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:padding="3dp" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/podrobnee"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            android:id="@+id/startactivity"
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/logotype"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/support"
+            android:layout_weight="1" />
+
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1" />
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/exitbutton"
+            android:id="@+id/exitbutton"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>

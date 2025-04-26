@@ -17,41 +17,6 @@
         android:orientation="vertical"
         android:gravity="top">
 
-        <!-- Верхняя навигация -->
-        <com.google.android.material.navigation.NavigationView
-            style="@style/MyUpBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                style="@style/MyLinerLayout">
-                <ImageView
-                    android:id="@+id/startactivity"
-                    style="@style/MyImageView"
-                    app:srcCompat="@drawable/logotype"
-                    android:layout_marginStart="10dp" />
-                <Button
-                    android:onClick="about_app"
-                    android:text="О ПРИЛОЖЕНИИ"
-                    android:backgroundTint="@color/button_color_up"
-                    android:textSize="13sp"
-                    style="@style/MyButtonStyleMargin"/>
-                <View style="@style/MyLineVertical"/>
-                <Button
-                    android:id="@+id/supportbutton"
-                    android:text="ПОДДЕРЖКА"
-                    android:backgroundTint="@color/button_color_up"
-                    android:textSize="13sp"
-                    style="@style/MyButtonStyleMargin"/>
-                <View style="@style/MyLineVertical"/>
-                <ImageView
-                    android:id="@+id/exitbutton"
-                    style="@style/MyImageView"
-                    app:srcCompat="@drawable/exitbutton"/>
-            </LinearLayout>
-        </com.google.android.material.navigation.NavigationView>
 
         <!-- Заголовок и меню -->
         <LinearLayout
@@ -136,34 +101,55 @@
             android:contentDescription="Перейти вправо"/>
     </LinearLayout>
 
-    <!-- Футер (нижняя панель), она фиксируется внизу -->
-    <FrameLayout
-        android:id="@+id/footer"
-        style="@style/MyLinerLayout"
+    <!-- Нижний бар -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:background="#E3D5CA"
         android:layout_alignParentBottom="true"
-        android:background="#E3D5CA">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            style="@style/MyLinerLayout"
-            android:background="#D6CCC2"
-            android:padding="10dp">
-            <ImageView
-                android:id="@+id/startactivity2"
-                style="@style/MyImageView"
-                app:srcCompat="@drawable/logotype"
-                android:layout_marginStart="10dp" />
-            <TextView
-                style="@style/MyTextView"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:text="Пользовательское соглашение"
-                android:textSize="15sp"/>
-        </LinearLayout>
-    </FrameLayout>
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/user"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:padding="3dp"/>
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1"/>
 
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/podrobnee"
+            android:layout_weight="1" />
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1"/>
+        <ImageView
+            android:id="@+id/startactivity"
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/logotype"
+            android:layout_weight="1"/>
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1"/>
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/support"
+            android:layout_weight="1"/>
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1"/>
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/exitbutton"
+            android:id="@+id/exitbutton"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
 </RelativeLayout>

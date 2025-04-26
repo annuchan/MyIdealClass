@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".edit_school_page"
+    android:background="#EDEDE9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top"
+        android:paddingBottom="60dp">
+
+        <!-- Оборачиваем только прокручиваемую часть в ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="true"
+            android:paddingBottom="60dp"
+          >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Элементы, которые будут прокручиваться -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    style="@style/MyLinerLayout">
+                    <ImageView
+                        android:id="@+id/dropdown_menu"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/menu"
+                        android:layout_margin="10dp"/>
+                    <ImageView
+                        android:id="@+id/back"
+                        style="@style/MyImageView"
+                        app:srcCompat="@drawable/left_arrow"/>
+                    <TextView
+                        style="@style/MyTextView"
+                        android:layout_width="match_parent"
+                        android:text="Информация школы"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/jost_semibold"/>
+                </LinearLayout>
+                <TextView
+                    style="@style/MyTextView"
+                    android:layout_width="match_parent"
+                    android:text="В этом разделе вы сможете редактировать информацию школы" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите наименование школы"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/SchoolTitle"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите сокращенное название"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/SchoolAbbreviature"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите адрес"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/SchoolAdress"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите номер телефона"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите адрес электронной почты"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolstudents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите количество обучающихся"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolyear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите дату создания"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolmissions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите миссию школы"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schooltask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите основные задачи"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schooldeyatelnost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите направление деятельности"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoollanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите языки образования"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoollevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите уровень образования"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolformaobycheniya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите форму обучения"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolwork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите режим работы школы"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolwork2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите график работы"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <TextView
+                    android:text="Изменить календарные учебные графики:"
+                    style="@style/MyTextView"
+                    android:layout_marginTop="10dp"/>
+                <Button
+                    android:text="1-4 класс"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    style="@style/MyButtonStyle"
+                    android:id="@+id/openpdf1_4"/>
+                <Button
+                    android:text="5-9 класс"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    style="@style/MyButtonStyle"/>
+                <Button
+                    android:text="10-11 класс"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    style="@style/MyButtonStyle"/>
+                <EditText
+                    android:id="@+id/schoolsrok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите нормативный срок обучения"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolakredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите срок действия гос. аккредитации"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <TextView
+                    android:text="Изменить:"
+                    style="@style/MyTextView"
+                    android:layout_marginTop="10dp"/>
+                <Button
+                    android:text="Свидетельство о госудаственной аккредитации"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    style="@style/MyButtonStyle"/>
+                <Button
+                    android:text="Лицензия на осуществление образовательной деятельности"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    style="@style/MyButtonStyle"/>
+                <Button
+                    android:text="Приложения лицензии на осуществление образовательной деятельности"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    style="@style/MyButtonStyle"/>
+                <EditText
+                    android:id="@+id/schoolpodrazdelenie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите структурные подразделения"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolfilials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите филиалы"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    />
+                <EditText
+                    android:id="@+id/schoolychreditel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyButtonStyle"
+                    android:hint="Введите учредителя"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+
+                    />
+                </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E3D5CA"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/user"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:padding="3dp"/>
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1"/>
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/podrobnee"
+            android:layout_weight="1" />
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1"/>
+        <ImageView
+            android:id="@+id/startactivity"
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/logotype"
+            android:layout_weight="1"/>
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1"/>
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/support"
+            android:layout_weight="1"/>
+        <View
+            style="@style/MyLineVertical"
+            android:layout_weight="0.1"/>
+
+        <ImageView
+            style="@style/MyImageView"
+            app:srcCompat="@drawable/exitbutton"
+            android:id="@+id/exitbutton"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</RelativeLayout>

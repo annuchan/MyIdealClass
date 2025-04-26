@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -39,7 +40,7 @@ public class Autorization extends AppCompatActivity {
         Button loginButton = findViewById(R.id.moreButton); // Пример кнопки входа
         EditText usernameEditText = findViewById(R.id.loginEditText); // Пример поля ввода логина
         EditText passwordEditText = findViewById(R.id.passwordEditText); // Пример поля ввода пароля
-
+        TextView textView = findViewById(R.id.fogotbutton);
         // Устанавливаем обработчик на кнопку входа
         loginButton.setOnClickListener(v -> {
             String username = usernameEditText.getText().toString();
@@ -49,6 +50,13 @@ public class Autorization extends AppCompatActivity {
                 performLogin(username, password); // Вызов метода авторизации
             } else {
                 Toast.makeText(Autorization.this, "Пожалуйста, введите логин и пароль", Toast.LENGTH_SHORT).show();
+            }
+        });
+        findViewById(R.id.fogotbutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Autorization.this, forgot_account.class); // замените на нужную активность
+                startActivity(intent);
             }
         });
     }
@@ -107,6 +115,7 @@ public class Autorization extends AppCompatActivity {
                 Toast.makeText(Autorization.this, "Ошибка: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
 

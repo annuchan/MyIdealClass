@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".forgot_account"
+    android:background="#E3D5CA">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/startactivity"
+                style="@style/MyImageView"
+                app:srcCompat="@drawable/logotype"/>
+            <TextView
+                style="@style/MyTextView"
+                android:layout_width="wrap_content"
+                android:text="Мой идеальный класс"
+                android:layout_marginLeft="10dp"
+                android:textSize="25dp"
+                android:fontFamily="@font/jost_semibold"/>
+        </LinearLayout>
+        <TextView
+            style="@style/MyTextView"
+            android:layout_width="wrap_content"
+            android:text="Забыл пароль"
+            android:textSize="23dp"
+            android:fontFamily="@font/jost_semibold"/>
+        <TextView
+            style="@style/MyTextView"
+            android:layout_width="wrap_content"
+            android:text="Если вы забыли пароль выберите одну из подходящих вам опций по восстановлению пароля"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/emailfogotbutton"
+            android:text="По вашей почте"
+            style="@style/MyButtonStyle"
+            android:layout_width="300dp"/>
+        <Button
+            android:id="@+id/loginfogotbutton"
+            android:text="По вашему логину"
+            style="@style/MyButtonStyle"
+            android:layout_width="300dp"/>
+        <Button
+            android:id="@+id/numberfogotbutton"
+            android:text="По номеру телефона"
+            style="@style/MyButtonStyle"
+            android:layout_width="300dp"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +33,12 @@ public class Application_form_User extends AppCompatActivity {
             }
         });
 
-
+        findViewById(R.id.Applicateformbutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "Ваша заявка принята", Toast.LENGTH_SHORT).show();
+            }
+        });
         findViewById(R.id.startactivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,15 +64,14 @@ public class Application_form_User extends AppCompatActivity {
 
         // Устанавливаем обработчик клика на кнопку
         exitButton.setOnClickListener(v -> {
-            // Логика выхода
-            logout();
+            Intent intent = new Intent(this, Autorization.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
 
         ImageView dropdownMenu = findViewById(R.id.dropdown_menu);
         dropdownMenu.setOnClickListener(view -> showCustomPopupMenu(view));
-    }
-    private void logout() {
-        finish();
     }
     private void showCustomPopupMenu(View view) {
         Dropdown_Menu.showCustomPopupMenu(view, this);

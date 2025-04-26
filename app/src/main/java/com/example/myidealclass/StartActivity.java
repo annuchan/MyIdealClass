@@ -77,8 +77,10 @@ public class StartActivity extends AppCompatActivity {
 
         // Устанавливаем обработчик клика на кнопку
         exitButton.setOnClickListener(v -> {
-            // Логика выхода
-            logout();
+            Intent intent = new Intent(this, Autorization.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
 
     }
@@ -90,8 +92,5 @@ public class StartActivity extends AppCompatActivity {
     public void about_app(View view) {
         Intent intent = new Intent(StartActivity.this, About_the_app.class); // замените на нужную активность
         startActivity(intent);
-    }
-    private void logout() {
-        finish();
     }
 }

@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E3D5CA"
+    android:padding="16dp">
+    <TextView
+        style="@style/MyTextView"
+        android:layout_width="match_parent"
+        android:text="Меню"
+        android:fontFamily="@font/jost_semibold"
+        android:textSize="25dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="важная информация"
+        style="@style/MyButtonStyle"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="расписание"
+        style="@style/MyButtonStyle"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="Страница школы"
+        style="@style/MyButtonStyle"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="Мероприятия"
+        style="@style/MyButtonStyle"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="Секции"
+        style="@style/MyButtonStyle"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="Учителя"
+        style="@style/MyButtonStyle"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="Ученики"
+        style="@style/MyButtonStyle"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="Родители"
+        style="@style/MyButtonStyle"/>
+</LinearLayout>
